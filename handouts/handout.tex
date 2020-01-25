@@ -204,7 +204,7 @@ This would result in the following (note the spacing denoted
 with a \textvisiblespace\ symbol):
 
 \begin{minted}[showspaces]{text}
-     hello,     42	 3.14
+>     hello,     42	 3.14
 \end{minted}     
 
 \section*{Activities}
@@ -366,7 +366,7 @@ This would result in the following (note the spacing denoted
 with a \textvisiblespace\ symbol):
 
 \begin{minted}[showspaces]{text}
-     hello,     42	 3.14
+>     hello,     42	 3.14
 \end{minted}     
 
 \section*{Activities}
@@ -448,13 +448,14 @@ Hint: to output to a file, use the \mintinline{java}{PrintWriter}
 class which supports easy output to files.  A full example:
 
 \begin{minted}{java}
+PrintWriter out;
 try {
-  PrintWriter out = new PrintWriter("filename");
-  out.write("you can output a string directly using this method!");
-  out.close();
+  out = new PrintWriter("filename");
 } catch (FileNotFoundException fnfe) {
   throw new RuntimeException(fnfe);
 }
+out.write("you can output a string directly using this method!");
+out.close();
 \end{minted}
   \item Answer the questions in your worksheet and demonstrate your 
   	working programs to a lab instructor.
