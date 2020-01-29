@@ -12,4 +12,5 @@
    Marlins 44.44
    Pirates 44.44
       Cubs 43.83
+    Padres 43.83
     Astros 34.57
