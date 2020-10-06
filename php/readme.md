@@ -161,6 +161,8 @@ You?
 ```
 
 Two related functions you may find useful are `preg_split()` and `str_split()`.
+You should also be careful when processing data in a file containing
+*empty lines*.  The `trim()` and `empty()` functions may be of help.
 
 ## 3. Activities 
 
