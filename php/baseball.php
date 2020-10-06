@@ -1,7 +1,11 @@
 <?php
 
-include_once("Team.php");
+include_once("team.php");
 
+/**
+ * A comparator function to order Team instances based on win percentage,
+ * most winning first.
+ */
 function teamComp($a, $b) {
   if($a->getWinPercentage() == $b->getWinPercentage()) {
     return 0;
@@ -10,12 +14,19 @@ function teamComp($a, $b) {
   }
 }
 
-  $file_handle = fopen("../data/mlb_nl_2011.txt", "r");
-
+function loadTeams() {
+  $fileHandle = fopen("../data/mlb_nl_2011.txt", "r");
   $teams = array();
+  // TODO: write code to open the file, process it line-by-line
+  // to create team instances and add them to the array.
+  //
+  // Be sure to close the file
 
-  //TODO: process the text file, creating teams and adding them to the array
+  return $teams;
+}
 
+
+  $teams = loadTeams();
   print "Teams: \n";
   foreach($teams as $team) {
     print $team . "\n";

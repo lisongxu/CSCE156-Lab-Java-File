@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Models a Major League Baseball team using its name, wins and losses
+ */
 class Team {
 
   private $name;
@@ -24,6 +27,9 @@ class Team {
     return $this->loss;
   }
 
+  /**
+   * Computes the team win percentage
+   */
   public function getWinPercentage() {
     return $this->wins / ($this->wins + $this->loss);
   }

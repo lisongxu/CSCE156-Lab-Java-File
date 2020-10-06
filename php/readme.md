@@ -12,17 +12,24 @@ This is a lab used in Computer Science II (CSCE 156, CSCE 156H) in the [Departme
 ### Resources
 
 Prior to lab you should read/review the following resources.
-* Java String tutorial   
-http://download.oracle.com/javase/tutorial/java/data/strings.html
-* Java File I/O tutorial  
-http://download.oracle.com/javase/tutorial/essential/io/file.html
-* Java tutorial on the `System.out.format` method  
-https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
+* PHP Arrays tutorial  
+http://www.php.net/manual/en/language.types.array.php
+
+* PHP tutorial on string functions  
+http://www.php.net/manual/en/ref.strings.php
+
+* PHP tutorial on file streams  
+http://www.php.net/manual/en/book.filesystem.php
+
+* PHP Manual on the (print formatted) and functions  
+http://php.net/manual/en/function.printf.php  
+http://www.php.net/manual/en/function.sprintf.php
+
 
 ### Lab Objectives & Topics
 
 Following the lab, you should be able to:
-* Use Strings and do basic file I/O in Java
+* Use Strings and do basic file I/O in PHP
 
 ### Peer Programming Pair-Up
 
@@ -65,7 +72,7 @@ lab. For those without prior Java experience, do the Java version.
 ## 2. Strings & File I/O
 
 You will familiarize yourself with strings and file input/output by
-completing two Java programs.
+completing two PHP scripts.
 
 The first program involves processing a DNA nucleotide sequence (a
 string consisting of the characters A, G, C, and T standing for the
@@ -89,8 +96,8 @@ list into a new file.
 
 ## 2.1 Formatted Output
 
-Most programming languages support or implement the standard
-functionality of the `printf()` or "print formatted" output originally 
+Most programming languages support or implement the standard 
+functionality of the `printf()` standard of formatted output originally 
 provided in the C programming language.
 
 Functions like `printf()` are *variable argument function* which 
@@ -111,19 +118,14 @@ supported:
     characters (including the decimal) and at most `M` decimals of
     precision.
 
-In Java you can use `String.format()` to format a `String` and save it
-to a variable or you can use `System.out.printf()` to output the result
-directly to the standard output.  A full example of both:
+In PHP you can use the `printf()` function directly to output the result
+to the standard output.  A full example:
 
-```java
-String a = "hello"; 
-int b = 42;
-double c = 3.1418;
-String result = String.format("%10s, %5d\t%5.2f\n", a, b, c);
-System.out.println(result);
-
-//alternatively:
-System.out.printf("%10s, %5d\t%5.2f\n", a, b, c);
+```php
+$a = "hello";
+$b = 42;
+$c = 3.1418;
+printf("%10s, %5d\t%5.2f\n", $a, $b, $c);
 ```
 
 This code snippet would result in the following output (dots
@@ -138,14 +140,14 @@ have been added to highlight *added* the spaces)
 Comma separate value (CSV) data is a common *flat file* data representation.
 In it, records are represented one per line in a file with individual data 
 fields separated by commas.  It is easy enough to process such data if you 
-already have them stored in a `String`: you can use Java's `split()` method
+already have them stored in a string: you can use PHP's `explode()` method
 to *tokenize* the data into an array of string *tokens*.  Example:
 
-```java
-String data = "Hello,World,How,Are,You?";
-String tokens[] = data.split(",");
-for(int i=0; i<tokens.length; i++) {
-  System.out.println(tokens[i]);
+```php
+$data = "Hello,World,How,Are,You?";
+$tokens = explode(",", $data);
+for($i=0; $i<count($tokens); $i++) {
+  printf("%s\n", $tokens[$i]);
 }
 ```
 
@@ -158,80 +160,81 @@ Are
 You?
 ```
 
+Two related functions you may find useful are `preg_split()` and `str_split()`.
+
 ## 3. Activities 
 
 ### 3.1 Substring Searching
 
-1.  Open the `DnaAnalysis.java` and `data/H1N1nucleotide.txt` files
 
-2.  Modify the `main` method to read in a DNa subsequence from the command line (and
+1.  Open the `dnaAnalysis.php` and `data/H1N1nucleotide.txt` files
+
+2.  Modify the script to read in a DNA subsequence from the command line (and
     to echo an error and exit if it is not provided).
     
 3.  The code to read in and process the nucleotide sequence is already
-    provided. Observe how it works: a `static` block is executed when the
-    class is loaded up by the JVM (before any methods are ever called).
-    This allows you to do any `static` initialization of variables.  The
-    `loadDnaFromFile()` method has been written for you.  It reads in 
-    the file line by line concatenating it into one large string.  It 
-    then trims out all whitespace using a *regular expression*
+    provided. Observe how it works: it opens the file, reads it line-by-line
+    concatenating it into one large string.  It then trims out all whitespace 
+    using a *regular expression*  
     
-4.  Implement the `countSubsequences()` method to count the number of
-    occurrences of the provided `subSequence`.  You may want to keep
-    the Java `String` documentation open to find any method(s) that will
-    help you process the DNA string:      
-    https://docs.oracle.com/en/java/javase/15/docs/api/java.base/java/lang/String.html
-
+    Alternatively, if you just want the raw contents of a file you can use
+    `file_get_contents()`.
+    
+4.  Implement the `countSubsequences()` function to count the number of
+    occurrences of the provided `$subSequence`.  You may want to reference
+    the PHP manual for any method(s) that will help you process strings.
     
 ### 3.2 File Processing
 
-1.  Open `Baseball.java` the `Team.java` source files. 
-    The `Team` class has already been implemented for you.  Recall from lab
+1.  Open the `baseball.php` and `team.php` files. The class has already been 
+    implemented and included in the script.  Recall from lab
     2 you can create an instance of an object by using the `new` keyword to
     call the class's constructor.  For example:  
-    ```java
+    ```php
     //Huskers had 8 wins, 4 losses:
-    Team t = new Team("Huskers", 8, 4);
+    $t = new Team("Huskers", 8, 4);
     ```
-
+    
 2.  Much of the code has been provided for you, including code to sort 
     the teams by win percentage and print them out (study this code as
     it may be useful in future assignments).
 
-3.  Finish implementing the `loadData()` method by adding code to open
+3.  Finish implementing the `loadTeams()` method by adding code to open
     the `mlb_nl_2011.csv` data file (in the `data` directory), process
-    it line-by-lie and create individual `Team` instances.
-
+    it line-by-line and create individual `Team` instances.
+    
 #### 3.2.1 File Output
 
 In this activity, you will write a method to output the sorted team list
-to a *file* rather than the standard output.  To output to a file, use 
-the class which supports easy output to files. A full example:
+to a *file* rather than the standard output.  To output to a file you 
+can open it for writing (`w`) and use `fprintf()` much like `printf()`.
+A full example:
 
-```java
-try {
-  PrintWriter pw = new PrintWriter("path/to/filename.txt");
-  pw.write("you can output a string directly using this method!");
-  pw.printf("Or you can use printf!\n");
-  pw.close();
-} catch (FileNotFoundException fnfe) {
-  throw new RuntimeException(fnfe);
-}
+```php
+$outFile = fopen("path/to/filename.txt", "w");
+$x = 42;
+fprintf($outFile, "you can output a string directly using this method!\n");
+fprintf($outFile, "or include formatted: %d output too!\n", $x);
+fclose($outFile);
+
+$str = "Alternatively, if you create a huge " .
+       "string, you can output all in one shot ";
+$str .= "if you use file_put_contents()";
+file_put_contents("outputFileName.txt", $str);
 ```
-
 
 ### 4. Testing, Submitting & Grading
 
-* Test your programs using the provided JUnit test suite(s).  Fix any
-errors and completely debug your programs.
+* Test your programs, fix any errors, and completely debug your programs.
 * Submit the following files through webhandin:
-  * `DnaAnalysis.java`
-  * `Baseball.java`
+  * `baseball.php`
+  * `dnaAnalysis.php`
 * Run the grader and verify the output to complete your lab.
 
 ### Advanced Activity (Optional) 
 
 The code to sort the teams according to their win percentage was
-provided for you. It involved defining a `Comparator` (as an anonymous class) that
+provided for you. It involved defining a *comparator* function that
 was passed as an argument to a built-in sort method. Study this code and
-read the documentation for the sorting method. Modify the to sort the
+read the documentation for the sorting method. Modify the code to sort the
 list of teams in alphabetic order according to the team name instead.
