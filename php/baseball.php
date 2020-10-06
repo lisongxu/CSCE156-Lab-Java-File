@@ -15,7 +15,7 @@ function teamComp($a, $b) {
 }
 
 function loadTeams() {
-  $fileHandle = fopen("../data/mlb_nl_2011.txt", "r");
+  $fileHandle = fopen("../data/mlb_nl_2011.csv", "r");
   $teams = array();
   // TODO: write code to open the file, process it line-by-line
   // to create team instances and add them to the array.
