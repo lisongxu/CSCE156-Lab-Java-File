@@ -17,6 +17,13 @@ public class Baseball {
 
 	private static final String FILE_NAME = "data/mlb_nl_2011.csv";
 
+	/**
+	 * This method loads MLB team data from the CSV file
+	 * specified by {@link #FILE_NAME} and instantiates 
+	 * and returns a list of {@link Team}s.
+	 * 
+	 * @return
+	 */
 	public static List<Team> loadData() {
 
 		List<Team> teams = new ArrayList<>();
