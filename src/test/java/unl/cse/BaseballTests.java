@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class BaseballTests {
 
@@ -33,7 +33,7 @@ public class BaseballTests {
 	 * loads and creates instances of the {@link Team} class.
 	 */
 	@Test
-	void teamFixedTest01() {
+	public void teamFixedTest01() {
 		List<Team> result = Baseball.loadData();
 		Assertions.assertEquals(EXPECTED, result);
 	}

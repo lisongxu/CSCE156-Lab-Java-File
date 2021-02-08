@@ -1,7 +1,7 @@
 package unl.cse;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 public class DnaAnalysisTests {
 
@@ -11,7 +11,7 @@ public class DnaAnalysisTests {
 	 * 
 	 */
 	@Test
-	void teamFixedTest01() {
+	public void teamFixedTest01() {
 		String sub = "gattaca";
 		int expected = 0;
 		int result = DnaAnalysis.countSubsequences(sub);
@@ -24,7 +24,7 @@ public class DnaAnalysisTests {
 	 * 
 	 */
 	@Test
-	void teamFixedTest02() {
+	public void teamFixedTest02() {
 		String sub = "g";
 		int expected = 305;
 		int result = DnaAnalysis.countSubsequences(sub);
@@ -37,7 +37,7 @@ public class DnaAnalysisTests {
 	 * 
 	 */
 	@Test
-	void teamFixedTest03() {
+	public void teamFixedTest03() {
 		String sub = "act";
 		int expected = 16;
 		int result = DnaAnalysis.countSubsequences(sub);
@@ -50,7 +50,7 @@ public class DnaAnalysisTests {
 	 * 
 	 */
 	@Test
-	void teamFixedTest04() {
+	public void teamFixedTest04() {
 		String sub = "gcg";
 		int expected = 5;
 		int result = DnaAnalysis.countSubsequences(sub);
@@ -63,7 +63,7 @@ public class DnaAnalysisTests {
 	 * 
 	 */
 	@Test
-	void teamFixedTest05() {
+	public void teamFixedTest05() {
 		String sub = "agt";
 		int expected = 25;
 		int result = DnaAnalysis.countSubsequences(sub);
