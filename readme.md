@@ -217,7 +217,15 @@ try {
   throw new RuntimeException(fnfe);
 }
 ```
+Add the following method to the `Baseball.java` source file that 
+takes a list of teams and an output file name and outputs
+the team data to that file.  
 
+`public static void persistData(List<Team> teams, String outputFileName)`
+- The format is up to you 
+- Call your method from the `main` and test that it works
+- Add javadoc-style documentation to your method.  Remember that
+  **all** classes and non-trivial methods require documentation.
 
 ### 4. Testing, Submitting & Grading
 

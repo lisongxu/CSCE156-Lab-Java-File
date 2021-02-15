@@ -1,5 +1,7 @@
 package unl.cse;
 
+import java.util.Comparator;
+
 /**
  * This class models a Major League Baseball team and their number of
  * wins/losses.
@@ -9,10 +11,21 @@ package unl.cse;
  */
 public class Team {
 
-	public final String name;
-	public final Integer wins;
-	public final Integer loss;
-
+	/**
+	 * A {@link Comparator} for {@code Team} objects that orders
+	 * them by win percentage in descending order.
+	 */
+	public static final Comparator<Team> teamByWinPercentage = new Comparator<Team>() {
+		@Override
+		public int compare(Team a, Team b) {
+			return b.getWinPercentage().compareTo(a.getWinPercentage());
+		}
+	};
+	
+	private final String name;
+	private final Integer wins;
+	private final Integer loss;
+	
 	public Team(String name, Integer wins, Integer loss) {
 		this.name = name;
 		this.wins = wins;

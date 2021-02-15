@@ -2,7 +2,6 @@ package unl.cse;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -34,7 +33,9 @@ public class Baseball {
 		// Be sure to close the scanner
 		return teams;
 	}
-
+	
+	//TODO: implement the file output method
+	
 	public static void main(String args[]) {
 
 		List<Team> teams = loadData();
@@ -44,18 +45,14 @@ public class Baseball {
 			System.out.println(t);
 		}
 
-		Collections.sort(teams, new Comparator<Team>() {
-			@Override
-			public int compare(Team a, Team b) {
-				return b.getWinPercentage().compareTo(a.getWinPercentage());
-			}
-
-		});
+		Collections.sort(teams, Team.teamByWinPercentage);
 
 		System.out.println("\n\nSorted Teams: ");
 		for (Team t : teams) {
 			System.out.println(t);
 		}
+		
+		//TODO: call your file output method with the sorted teams
 
 	}
 
