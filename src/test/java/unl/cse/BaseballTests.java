@@ -4,9 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.rules.Timeout;
+import org.junit.Rule;
 import org.junit.Test;
 
 public class BaseballTests {
+
+	/**
+	 * A 5 second global timeout rule to protect against infinite loops
+	 */
+	@Rule
+    public Timeout globalTimeout = Timeout.seconds(5);
 
 	private static final List<Team> EXPECTED = new ArrayList<Team>();
 	static {
