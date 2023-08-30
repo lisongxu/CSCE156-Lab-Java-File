@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 /**
+ * This is a Javadoc comment. If interested, read https://faculty.kutztown.edu/spiegel/JavadocTutorial.html
  * Processes DNA data and counts the number of instances that a particular DNA
  * subsequence appears.
  *
@@ -21,7 +22,8 @@ public class DnaAnalysis {
 	}
 
 	/**
-	 * Loads a DNA string from the {@link #DNA_FILE} and returns it as a string with
+	 * This is a Javadoc comment. If interested, read https://faculty.kutztown.edu/spiegel/JavadocTutorial.html
+         * Loads a DNA string from the {@link #DNA_FILE} and returns it as a string with
 	 * all whitespace removed.
 	 * 
 	 * @return
@@ -48,6 +50,7 @@ public class DnaAnalysis {
 	}
 
 	/**
+	 * This is a Javadoc comment. If interested, read https://faculty.kutztown.edu/spiegel/JavadocTutorial.html
 	 * Counts the number of times <code>subSequence</code> appears in the
 	 * {@link #DNA} string
 	 * 
