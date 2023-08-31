@@ -24,6 +24,8 @@ https://docs.oracle.com/javase/tutorial/java/data/numberformat.html
 Following the lab, you should be able to:
 * Use Strings and do basic file I/O in Java
 
+Note that the lab may involve some concepts, classes, or methods not covered (yet) in the class. You should be able to complete the lab without fully understanding them. If you have any questions about them, please feel free to ask our LAs. 
+
 ### Peer Programming Pair-Up
 
 At the start of
