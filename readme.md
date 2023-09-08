@@ -70,12 +70,11 @@ list into a new file.
 
 ## 2.1 Formatted Output
 
-Most programming languages support or implement the standard
-functionality of the `printf()` or "print formatted" output originally 
-provided in the C programming language.
+In Java you can use `String.format()` to format a `String` and save it
+to a variable or you can use `System.out.printf()` to output the result
+directly to the standard output.
 
-Functions like `printf()` are *variable argument function* which 
-means that they can take a *variable* number of arguments.  The first
+Both methods take a *variable* number of arguments.  The first
 argument is a string that specifies a *format* in which to print the 
 subsequent arguments.  Various flags can be used to print different types of 
 variable values in a specific format. Some of the major flags
@@ -92,9 +91,7 @@ supported:
     characters (including the decimal) and at most `M` decimals of
     precision.
 
-In Java you can use `String.format()` to format a `String` and save it
-to a variable or you can use `System.out.printf()` to output the result
-directly to the standard output.  A full example of both:
+A full example of both:
 
 ```java
 String a = "hello"; 
@@ -145,7 +142,7 @@ You?
 
 1.  Open the `DnaAnalysis.java` and `data/H1N1nucleotide.txt` files
 
-2.  Modify the `main` method to read in a DNa subsequence from the command line (and
+2.  Modify the `main` method to read in a DNA subsequence from the command line (and
     to echo an error and exit if it is not provided).
     
 3.  The code to read in and process the nucleotide sequence is already
@@ -180,7 +177,7 @@ You?
 
 3.  Finish implementing the `loadData()` method by adding code to open
     the `mlb_nl_2011.csv` data file (in the `data` directory), process
-    it line-by-lie and create individual `Team` instances.
+    it line-by-line and create individual `Team` instances.
 
 #### 3.2.1 File Output
 
