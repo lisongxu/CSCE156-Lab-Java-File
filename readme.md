@@ -40,7 +40,7 @@ last week, be a navigator next, etc.
 ## 1. Getting Started
 
 Clone this project code for this lab from GitHub in Eclipse using the
-URL: https://github.com/lisongxu/CSCE156-Lab-Java-File
+URL: `https://github.com/lisongxu/CSCE156-Lab-Java-File`
 
 
 ## 2. Strings & File I/O
