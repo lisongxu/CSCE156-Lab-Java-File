@@ -83,8 +83,8 @@ You?
 ## 2.2 Formatted Output
 
 In Java you can use `String.format()` to format a `String` and save it
-to a variable or you can use `System.out.printf()` to output the result
-directly to the standard output.
+to a variable or you can use `printf()` of `PrintWriter` to output the result
+to a file.
 
 Both methods take a *variable* number of arguments.  The first
 argument is a string that specifies a *format* in which to print the 
@@ -103,17 +103,17 @@ supported:
     characters (including the decimal) and at most `M` decimals of
     precision.
 
-A full example of both:
+A full example of both, where `output` is a `PrintWriter`
 
 ```java
 String a = "hello"; 
 int b = 42;
 double c = 3.1418;
 String result = String.format("%10s, %5d\t%5.2f\n", a, b, c);
-System.out.println(result);
+output.println(result);
 
 //alternatively:
-System.out.printf("%10s, %5d\t%5.2f\n", a, b, c);
+output.printf("%10s, %5d\t%5.2f\n", a, b, c);
 ```
 
 This code snippet would result in the following output (dots
@@ -168,13 +168,14 @@ the team data to that file.
 `public static void persistData(List<Team> teams, String outputFileName)`
 - The format is up to you
 - The filename is up to you
-- Call your method from the `main` and check whether the file is created with sorted teams
+- Call your method from the `main`
+- After running your program, please manually check whether the file is created with the sorted teams
 
 ### 4. Testing, Submitting & Grading
 
-* Test your programs locally on your computer using the provided JUnit test suite(s).  Fix any
+* Test your programs locally on your computer using the provided JUnit test suites (only one).  Fix any
 errors and completely debug your programs.
 * Submit the following file to CodePost:
   * `Baseball.java`
-* Make sure that your pogram pass  the test on CodePost. For this lab, as long as your porograms pass  the test on Codepost, you will get full points for the lab.
+* Make sure that your pogram pass  the test (Only one) on CodePost. For this lab, as long as your porograms pass  the test on Codepost, you will get full points for the lab.
 
