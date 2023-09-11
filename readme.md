@@ -173,9 +173,9 @@ the team data to that file.
 
 ### 4. Testing, Submitting & Grading
 
-* Test your programs locally on your computer using the provided JUnit test suites (only one).  Fix any
+* Test your programs locally on your computer using the provided JUnit test suite (only one).  Fix any
 errors and completely debug your programs.
 * Submit the following file to CodePost:
   * `Baseball.java`
-* Make sure that your pogram pass  the test (Only one) on CodePost. For this lab, as long as your porograms pass  the test on Codepost, you will get full points for the lab.
+* Make sure that your program passes  the test (Only one) on CodePost. For this lab, as long as your program passes  the test on Codepost, you will get full points for the lab.
 
