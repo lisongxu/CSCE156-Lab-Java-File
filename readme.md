@@ -57,7 +57,7 @@ list into a new file.
 
 ## 2.1 Processing CSV Data
 
-Comma separate value (CSV) data is a common *flat file* data representation.
+Comma separated value (CSV) data is a common *flat file* data representation.
 In it, records are represented one per line in a file with individual data 
 fields separated by commas.  It is easy enough to process such data if you 
 already have them stored in a `String`: you can use Java's `split()` method
