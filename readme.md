@@ -143,7 +143,7 @@ have been added to highlight *added* the spaces)
 
 3.  Finish implementing the `loadData()` method by adding code to open
     the `mlb_nl_2011.csv` data file (in the `data` directory), process
-    it line-by-line and create individual `Team` instances.
+    it line-by-line and create individual `Team` instances. Note that you must handle `FileNotFoundException` using one of the methods that we studied in the class; otherwise, your code does not compile because it is a checked exception. 
 
 #### 3.2 File Output
 
