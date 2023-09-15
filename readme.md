@@ -143,7 +143,7 @@ have been added to highlight *added* the spaces)
 
 3.  Finish implementing the `loadData()` method by adding code to open
     the `mlb_nl_2011.csv` data file (in the `data` directory), process
-    it line-by-line and create individual `Team` instances. Note that you must handle `FileNotFoundException` using one of the methods that we studied in the class; otherwise, your code does not compile because it is a checked exception. 
+    it line-by-line and create individual `Team` instances. Please handle `FileNotFoundException` using `try` and `catch` blocks; otherwise, your code does not compile. 
 
 #### 3.2 File Output
 
@@ -169,7 +169,7 @@ the team data to that file.
 - The format is up to you
 - The filename is up to you
 - Call your method from the `main`
-- After running your program, please manually check whether the file is created with the sorted teams
+- After running your program, please manually check whether the file is created with the sorted teams. Note that the generated file will not show up until you refresh your eclipse project explorer.
 
 ### 4. Testing, Submitting & Grading
 
