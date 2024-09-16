@@ -119,7 +119,7 @@ have been added to highlight *added* the spaces)
     the teams by win percentage and print them out (study this code as
     it may be useful in future assignments).
 
-3.  Finish implementing the `loadData()` method by adding code to open the `mlb_nl_2011.csv` data file (in the `data` directory), process it line-by-line, and create individual `Team` instances. Please *handle `FileNotFoundException` using `try` and `catch` blocks*; otherwise, your code does not compile. 
+3.  Finish implementing the `loadData()` method by adding code to open the `mlb_nl_2011.csv` data file (in the `data` directory), process it line-by-line, and create individual `Team` instances. Please ***handle `FileNotFoundException` using `try` and `catch` blocks***; otherwise, your code does not compile. 
 
 ### 3.2 File Output
 
