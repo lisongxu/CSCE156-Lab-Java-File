@@ -1,10 +1,9 @@
 # Computer Science II
 ## Lab 4.0 - Strings & File I/O
 
-An introduction to strings and file input/output in the Java programming
-language.  
+An introduction to strings and file input/output in the Java programming language.  
 
-This is a lab used in Computer Science II (CSCE 156) for Fall 2023 
+This is a lab used in Computer Science II (CSCE 156) for Fall 2024 
 in the [School of Computing](https://computing.unl.edu) 
 at the [University of Nebraska-Lincoln](https://www.unl.edu).
 
@@ -28,11 +27,7 @@ Note that the lab may involve some concepts, classes, or methods not covered (ye
 
 ### Peer Programming Pair-Up
 
-At the start of
-each lab, you may find a team member by yourself or may be randomly paired up with another student by
-a lab instructor.  One of you will be designated the *driver* 
-and the other the *navigator*. If you prefer to work on this lab by yourself, that is fine too.  Each week you should try to alternate: if you were a driver 
-last week, be a navigator next, etc. 
+At the start of each lab, you may find a team member by yourself or may be randomly paired up with another student by a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. If you prefer to work on this lab by yourself, that is fine too.  Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. 
 
 ***Note that, each student must submit the code to CodePost for grading.***
 
