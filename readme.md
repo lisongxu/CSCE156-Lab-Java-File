@@ -27,9 +27,9 @@ Note that the lab may involve some concepts, classes, or methods not covered (ye
 
 ### Peer Programming Pair-Up
 
-At the start of each lab, you may find a team member by yourself or may be randomly paired up with another student by a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. If you prefer to work on this lab by yourself, that is fine too.  Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. 
+At the start of each lab, you may find a team member by yourself or be randomly paired up with another student by a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. If you prefer to work on this lab by yourself, that is fine too. 
 
-***Note that, each student must submit the code to CodePost for grading.***
+***Note that each student must submit the code to GradeScope for grading.***
 
 
 ## 1. Getting Started
@@ -40,23 +40,13 @@ URL: `https://github.com/lisongxu/CSCE156-Lab-Java-File`
 
 ## 2. Strings & File I/O
 
-The program involves processing a file containing formatted data.
-Specifically, you will process a file containing the win/loss records of
-National League baseball Teams from the 2011 season. The file is
-formatted as follows: each line contains the win/loss record of a single
-team (16 teams total). Each line contains the team name, the number of
-wins, and the number of losses. Your program will read in the file,
-process the data and sort the teams in the order of their win percentage
-(wins divided by total games) and output the sorted and reformatted team
-list into a new file.
+The program involves processing a file containing formatted data. Specifically, you will process a file containing the win/loss records of National League baseball Teams from the 2011 season. The file is formatted as follows: each line contains the win/loss record of a single team (16 teams total). Each line contains the team name, the number of
+wins, and the number of losses. Your program will read the file, process the data, sort the teams in the order of their win percentage (wins divided by total games), and output the sorted and reformatted team list into a new file.
 
 ## 2.1 Processing CSV Data
 
-Comma separated value (CSV) data is a common *flat file* data representation.
-In it, records are represented one per line in a file with individual data 
-fields separated by commas.  It is easy enough to process such data if you 
-already have them stored in a `String`: you can use Java's `split()` method
-to *tokenize* the data into an array of string *tokens*.  Example:
+Comma-separated value (CSV) data is a common *flat file* data representation. In it, records are represented one per line in a file with individual data fields separated by commas.  It is easy enough to process such data if you 
+already have them stored in a `String`: you can use Java's `split()` method to *tokenize* the data into an array of string *tokens*.  Example:
 
 ```java
 String data = "Hello,World,How,Are,You?";
@@ -77,15 +67,9 @@ You?
 
 ## 2.2 Formatted Output
 
-In Java you can use `String.format()` to format a `String` and save it
-to a variable or you can use `printf()` of `PrintWriter` to output the result
-to a file.
+In Java, you can use `String.format()` to format a `String` and save it to a variable or you can use `printf()` of `PrintWriter` to output the result to a file.
 
-Both methods take a *variable* number of arguments.  The first
-argument is a string that specifies a *format* in which to print the 
-subsequent arguments.  Various flags can be used to print different types of 
-variable values in a specific format. Some of the major flags
-supported:
+Both methods take a *variable* number of arguments.  The first argument is a string that specifies a *format* in which to print the subsequent arguments.  Various flags can be used to print different types of variable values in a specific format. Some of the major flags supported:
 
 * `%Ns` - print the argument as a string, right-justified with at least `N`
     characters. If the string value is less than `N`, it will be padded
@@ -125,8 +109,7 @@ have been added to highlight *added* the spaces)
 ### 3.1 File Processing
 
 1.  Open `Baseball.java` and `Team.java` source files. 
-    The `Team` class has already been implemented for you.  You can create an instance of an object by using the `new` keyword to
-    call the class's constructor.  For example:  
+    The `Team` class has already been implemented for you.  You can create an instance of an object by using the `new` keyword to call the class's constructor.  For example:  
     ```java
     //Huskers had 8 wins, 4 losses:
     Team t = new Team("Huskers", 8, 4);
@@ -136,15 +119,11 @@ have been added to highlight *added* the spaces)
     the teams by win percentage and print them out (study this code as
     it may be useful in future assignments).
 
-3.  Finish implementing the `loadData()` method by adding code to open
-    the `mlb_nl_2011.csv` data file (in the `data` directory), process
-    it line-by-line and create individual `Team` instances. Please handle `FileNotFoundException` using `try` and `catch` blocks; otherwise, your code does not compile. 
+3.  Finish implementing the `loadData()` method by adding code to open the `mlb_nl_2011.csv` data file (in the `data` directory), process it line-by-line, and create individual `Team` instances. Please *handle `FileNotFoundException` using `try` and `catch` blocks*; otherwise, your code does not compile. 
 
-#### 3.2 File Output
+### 3.2 File Output
 
-In this activity, you will write a method to output the sorted team list
-to a *file* rather than the standard output.  To output to a file, use 
- class `PrintWriter` which supports easy output to files. A full example:
+In this activity, you will write a method to output the sorted team list to a *file* rather than the standard output.  To output to a file, use class `PrintWriter` which supports easy output to files. A full example with `try` and `catch` blocks:
 
 ```java
 try {
@@ -156,21 +135,19 @@ try {
   throw new RuntimeException(fnfe);
 }
 ```
-Add the following method to the `Baseball.java` source file that 
-takes a list of teams and an output file name and outputs
-the team data to that file.  
+Add the following method to the `Baseball.java` source file, which takes a list of teams and an output file name, and outputs the team data to that file.  
 
 `public static void persistData(List<Team> teams, String outputFileName)`
 - The format is up to you
 - The filename is up to you
-- Call your method from the `main`
-- After running your program, please manually check whether the file is created with the sorted teams. Note that the generated file will not show up until you refresh your eclipse project explorer.
+- Call your method in the `main` method
+- After running your program, please manually check whether the file is created with the sorted teams. Note that the generated file will not show up until you refresh your Eclipse project explorer.
 
 ### 4. Testing, Submitting & Grading
 
 * Test your programs locally on your computer using the provided JUnit test suite (only one).  Fix any
 errors and completely debug your programs.
-* Submit the following file to CodePost:
+* Submit only the following file to GradeScope:
   * `Baseball.java`
-* Make sure that your program passes  the test (Only one) on CodePost. For this lab, as long as your program passes  the test on Codepost, you will get full points for the lab.
+* Make sure that your program passes  the test (Only one) on GradeScope. For this lab, as long as your program passes  the test on GradeScope, you will get full points for the lab.
 
