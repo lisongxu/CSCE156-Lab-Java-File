@@ -147,10 +147,10 @@ Add the following method to the `Baseball.java` source file, which takes a list 
 
 * Test your programs locally on your computer using the provided JUnit test suite.  
 
- 1. Expand the `src/test/java` directory, then expand the `unl.soc` package, and then double click on the `BaseballTests.java` file to open 
+   1. Expand the `src/test/java` directory, then expand the `unl.soc` package, and then double click on the `BaseballTests.java` file to open 
 it. 
- 2. Run the test suite by clicking the usual "Play" button.
- 3. Fix any errors and completely debug your programs. 
+   2. Run the test suite by clicking the usual "Play" button.
+   3. Fix any errors and completely debug your programs. 
 
 * Submit only the following file to GradeScope:
   * `Baseball.java`
