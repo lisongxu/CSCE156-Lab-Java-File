@@ -145,9 +145,17 @@ Add the following method to the `Baseball.java` source file, which takes a list 
 
 ### 4. Testing, Submitting & Grading
 
-* Test your programs locally on your computer using the provided JUnit test suite (only one).  Fix any
-errors and completely debug your programs.
+* Test your programs locally on your computer using the provided JUnit test suite.  
+
+ 1. Expand the `src/test/java` directory, then expand the `unl.soc` package, and then double click on the `BaseballTests.java` file to open 
+it. 
+ 2. Run the test suite by clicking the usual "Play" button.
+ 3. Fix any errors and completely debug your programs. 
+
 * Submit only the following file to GradeScope:
   * `Baseball.java`
-* Make sure that your program passes  the test (Only one) on GradeScope. For this lab, as long as your program passes  the test on GradeScope, you will get full points for the lab.
+
+* Make sure that your program passes  the test (only one) on GradeScope. For this lab, as long as your program passes  the test on GradeScope, you will get full points for the lab.
+
+* What if the test on GradeScope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on GradeScope is exactly the same as the provided JUnit test suite. Debugging your programs on GradeScope is not recommended because GradeScope gives very limited information.
 
