@@ -3,7 +3,7 @@
 
 An introduction to strings and file input/output in the Java programming language.  
 
-This is a lab used in Computer Science II (CSCE 156) for Fall 2024 
+This is a lab used in Computer Science II (CSCE 156) for Fall 2025 
 in the [School of Computing](https://computing.unl.edu) 
 at the [University of Nebraska-Lincoln](https://www.unl.edu).
 
@@ -27,7 +27,7 @@ Note that the lab may involve some concepts, classes, or methods not covered (ye
 
 ### Peer Programming Pair-Up
 
-At the start of each lab, you may find a team member by yourself or be randomly paired up with another student by a lab instructor.  One of you will be designated the *driver* and the other the *navigator*. Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. If you prefer to work on this lab by yourself, that is fine too. 
+At the start of each lab, you may find a team member by yourself.  One of you will be designated the *driver* and the other the *navigator*. Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. If you prefer to work on this lab alone, that is fine too. 
 
 ***Note that each student must submit the code to GradeScope for grading.***
 
@@ -45,8 +45,7 @@ wins, and the number of losses. Your program will read the file, process the dat
 
 ## 2.1 Processing CSV Data
 
-Comma-separated value (CSV) data is a common *flat file* data representation. In it, records are represented one per line in a file with individual data fields separated by commas.  It is easy enough to process such data if you 
-already have them stored in a `String`: you can use Java's `split()` method to *tokenize* the data into an array of string *tokens*.  Example:
+Comma-separated value (CSV) data is a common *flat file* data representation. In it, records are represented one per line in a file with individual data fields separated by commas.  It is easy enough to process such data if you already have them stored in a `String`: you can use Java's `split()` method to *tokenize* the data into an array of string *tokens*.  Example:
 
 ```java
 String data = "Hello,World,How,Are,You?";
@@ -147,7 +146,7 @@ Add the following method to the `Baseball.java` source file, which takes a list 
 
 * Test your programs locally on your computer using the provided JUnit test suite.  
 
-   1. Expand the `src/test/java` directory, then expand the `unl.soc` package, and then double click on the `BaseballTests.java` file to open 
+   1. Expand the `src/test/java` directory, then expand the `unl.soc` package, and then double-click on the `BaseballTests.java` file to open 
 it. 
    2. Run the test suite by clicking the usual "Play" button.
    3. Fix any errors and completely debug your programs. 
