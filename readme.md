@@ -1,5 +1,5 @@
 # Computer Science II
-## Lab 4.0 - Strings & File I/O
+## Lab 4 - Strings & File I/O
 
 An introduction to strings and file input/output in the Java programming language.  
 
