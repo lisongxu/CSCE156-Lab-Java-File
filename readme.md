@@ -94,7 +94,7 @@ output.printf("%10s, %5d\t%5.2f\n", a, b, c);
 ```
 
 This code snippet would result in the following output (dots
-have been added to highlight *added* the spaces)
+have been added to highlight the spaces)
 
 ```text
 .....hello, ...42     .3.14
@@ -150,10 +150,10 @@ it.
    2. Run the test suite by clicking the usual "Play" button.
    3. Fix any errors and completely debug your programs. 
 
-* Submit only the following file to GradeScope:
+* Submit only the following file to Gradescope:
   * ***`Baseball.java`***
 
 * Make sure that your program passes  the test (only one) on Gradescope. For this lab, as long as your program passes  the test on Gradescope, you will get full points for the lab.
 
-* What if the test on GradeScope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on Gradescope is exactly the same as the provided JUnit test suite. ***Debugging your programs on GradeScope is not recommended because Gradescope gives very limited information.***
+* What if the test on Gradescope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on Gradescope is exactly the same as the provided JUnit test suite. ***Debugging your programs on Gradescope is not recommended because Gradescope gives very limited information.***
 
