@@ -3,7 +3,7 @@
 
 An introduction to strings and file input/output in the Java programming language.  
 
-This is a lab used in Computer Science II (CSCE 156) for Fall 2025 
+This is a lab used in Computer Science II (CSCE 156) for Fall 2026 
 in the [School of Computing](https://computing.unl.edu) 
 at the [University of Nebraska-Lincoln](https://www.unl.edu).
 
@@ -29,7 +29,7 @@ Note that the lab may involve some concepts, classes, or methods not covered (ye
 
 At the start of each lab, you may find a team member by yourself.  One of you will be designated the *driver* and the other the *navigator*. Each week you should try to alternate: if you were a driver last week, be a navigator next, etc. If you prefer to work on this lab alone, that is fine too. 
 
-***Note that each student must submit the code to GradeScope for grading.***
+***Note that each student must submit the code to Gradescope for grading.***
 
 
 ## 1. Getting Started
@@ -43,7 +43,7 @@ URL: `https://github.com/lisongxu/CSCE156-Lab-Java-File`
 The program involves processing a file containing formatted data. Specifically, you will process a file containing the win/loss records of National League baseball Teams from the 2011 season. The file is formatted as follows: each line contains the win/loss record of a single team (16 teams total). Each line contains the team name, the number of
 wins, and the number of losses. Your program will read the file, process the data, sort the teams in the order of their win percentage (wins divided by total games), and output the sorted and reformatted team list into a new file.
 
-## 2.1 Processing CSV Data
+### 2.1 Processing CSV Data
 
 Comma-separated value (CSV) data is a common *flat file* data representation. In it, records are represented one per line in a file with individual data fields separated by commas.  It is easy enough to process such data if you already have them stored in a `String`: you can use Java's `split()` method to *tokenize* the data into an array of string *tokens*.  Example:
 
@@ -64,7 +64,7 @@ Are
 You?
 ```
 
-## 2.2 Formatted Output
+### 2.2 Formatted Output
 
 In Java, you can use `String.format()` to format a `String` and save it to a variable or you can use `printf()` of `PrintWriter` to output the result to a file.
 
@@ -75,11 +75,10 @@ Both methods take a *variable* number of arguments.  The first argument is a str
     out with spaces. Variations on this flag can be used to change the
     padding character and to left-justify (negative `N`) instead.
 
-* `%Nd` - print the argument as an integer with at least `N` spaces.
+* `%Nd` - print the argument as an integer with at least `N` characters.
 
-* `N.Mf` - print the argument as a floating point number with at least `N`
-    characters (including the decimal) and at most `M` decimals of
-    precision.
+* `%N.Mf` - print the argument as a floating-point number with at least `N`
+    characters (including the decimal) and exactly `M` digits after the decimal point.
 
 A full example of both, where `output` is a `PrintWriter`
 
@@ -88,7 +87,7 @@ String a = "hello";
 int b = 42;
 double c = 3.1418;
 String result = String.format("%10s, %5d\t%5.2f\n", a, b, c);
-output.println(result);
+output.print(result);
 
 //alternatively:
 output.printf("%10s, %5d\t%5.2f\n", a, b, c);
@@ -142,7 +141,7 @@ Add the following method to the `Baseball.java` source file, which takes a list 
 - Call your method in the `main` method
 - After running your program, please manually check whether the file is created with the sorted teams. Note that the generated file will not show up until you refresh your Eclipse project explorer.
 
-### 4. Testing, Submitting & Grading
+## 4. Testing, Submitting & Grading
 
 * Test your programs locally on your computer using the provided JUnit test suite.  
 
@@ -154,7 +153,7 @@ it.
 * Submit only the following file to GradeScope:
   * ***`Baseball.java`***
 
-* Make sure that your program passes  the test (only one) on GradeScope. For this lab, as long as your program passes  the test on GradeScope, you will get full points for the lab.
+* Make sure that your program passes  the test (only one) on Gradescope. For this lab, as long as your program passes  the test on Gradescope, you will get full points for the lab.
 
 * What if the test on GradeScope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on GradeScope is exactly the same as the provided JUnit test suite. ***Debugging your programs on GradeScope is not recommended because GradeScope gives very limited information.***
 
