@@ -3,19 +3,17 @@ package unl.soc;
 import java.util.*;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.rules.Timeout;
-import org.junit.Rule;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
+/**
+ * A 5 second global timeout rule to protect against infinite loops
+ */
+@Timeout(5)
 public class BaseballTests {
 
-	/**
-	 * A 5 second global timeout rule to protect against infinite loops
-	 */
-	@Rule
-    public Timeout globalTimeout = Timeout.seconds(5);
-
 	private static final List<Team> EXPECTED = new ArrayList<Team>();
+	
 	static {
 		EXPECTED.add(new Team("Phillies", 102, 60));
 		EXPECTED.add(new Team("Braves", 89, 73));
