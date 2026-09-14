@@ -155,5 +155,5 @@ it.
 
 * Make sure that your program passes  the test (only one) on Gradescope. For this lab, as long as your program passes  the test on Gradescope, you will get full points for the lab.
 
-* What if the test on GradeScope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on GradeScope is exactly the same as the provided JUnit test suite. ***Debugging your programs on GradeScope is not recommended because GradeScope gives very limited information.***
+* What if the test on GradeScope fails? Please test your program locally on your computer using the provided JUnit test suite, because the test on Gradescope is exactly the same as the provided JUnit test suite. ***Debugging your programs on GradeScope is not recommended because Gradescope gives very limited information.***
 
